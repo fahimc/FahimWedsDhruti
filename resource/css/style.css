@@ -1,0 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300);
+
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+#nav {
+	position: fixed;
+	left: 0;
+	top: 180px;
+	width: 330px;
+}
+
+#nav .item {
+
+	background-color: #191919;
+	padding: 5px 20px 5px 20px;
+	color: #FFF;
+	margin-bottom: 3px;
+	width: auto;
+	display: inline-block;
+	margin-right: 100px;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 20px;
+}
+#nav .item:hover {
+	background-color: #FFFFFF;
+	color: #191919;
+}
+#view1 {
+	background: url(../image/bg3.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#logo {
+	background: url(../image/logo.png) no-repeat;
+	width: 352px;
+	height: 165px;
+	
+	top: 0px;
+	left: 10px;
+		margin-left: 0px;
+	position: fixed;
+}
+#us {
+	background: url(../image/us.png) no-repeat;
+	width: 671px;
+	height: 659px;
+	right: 100px;
+	bottom: 0px;
+	position: absolute;
+}
+/* VIEW 2 */
+#view2 {
+	background: url(../image/bg4.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#venueContentHolder {
+	width: 30%;
+	height: 100%;
+	background-color: #FFFFFF;
+	position: absolute;
+	right: 0px;
+}
+#venueContentHolder h1, #venueContentHolder p {
+	padding: 20px;
+}
+/* VIEW 4 */
+#view4 {
+	background: url(../image/bg2.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/* VIEW 3 */
+#view3 {
+background: url(../image/bg5.jpg) no-repeat right center fixed;
+	
+}
+@media all and (max-width: 1199px) {
+	
+	#venueContentHolder {
+	width: 40%;
+	}
+}
