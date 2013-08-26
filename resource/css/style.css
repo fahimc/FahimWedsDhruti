@@ -78,7 +78,7 @@ html, body {
 }
 /* VIEW 4 */
 #view4 {
-	background: url(../image/bg2.jpg) no-repeat center center fixed;
+	background: url(../image/bg2.jpg) no-repeat center center ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
