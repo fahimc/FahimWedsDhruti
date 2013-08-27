@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300);
+@import url(http://fonts.googleapis.com/css?family=Chivo:900);
 
 * {
 	padding: 0;
@@ -33,65 +34,115 @@ html, body {
 	background-color: #FFFFFF;
 	color: #191919;
 }
-#view1 {
-	background: url(../image/bg3.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-#logo {
-	background: url(../image/logo.png) no-repeat;
-	width: 352px;
-	height: 165px;
-	
-	top: 0px;
-	left: 10px;
-		margin-left: 0px;
-	position: fixed;
-}
-#us {
-	background: url(../image/us.png) no-repeat;
-	width: 671px;
-	height: 659px;
-	right: 100px;
-	bottom: 0px;
-	position: absolute;
-}
-/* VIEW 2 */
-#view2 {
-	background: url(../image/bg4.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-#venueContentHolder {
-	width: 30%;
+#view1 
+{
+	width: 100%;
 	height: 100%;
-	background-color: #FFFFFF;
-	position: absolute;
-	right: 0px;
+	position: relative;
+	
 }
-#venueContentHolder h1, #venueContentHolder p {
-	padding: 20px;
-}
-/* VIEW 4 */
-#view4 {
-	background: url(../image/bg2.jpg) no-repeat center center ;
+#view1 .cover{
+	position:relative;
+	width:100%;
+	height:80.25%;
+	background: url(../image/bg_home.jpg) no-repeat center bottom fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	min-height: 642px;
 }
-/* VIEW 3 */
-#view3 {
-background: url(../image/bg5.jpg) no-repeat right center fixed;
-	
+#view1 .logoHolder{
+width:100%;
+	height:158px;
+	position: absolute;
+	bottom: 0;
+	background-color: #FFFFFF;
+	text-align: center;
 }
-@media all and (max-width: 1199px) {
+#view1 .logoHolder .logo
+{
+	width:399px;
+	height:91px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 33px;
+}
+#view1 .countdownHolder
+{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 150px;
+	text-align: center;
+	color: #c79810;
+	font-weight: 800;
+	text-shadow: 2px 2px 1px #000;
+}
+#view1 .countdownHolder .text{
 	
-	#venueContentHolder {
-	width: 40%;
-	}
+	font-size: 18px;
+}
+#countdown
+{
+	font-size: 30px;
+}
+#view2
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #383733;
+}
+.view1Divider
+{
+	width:100%;
+	height:5px;
+	background-color: #383733;
+}
+#view2 .nav
+{
+	
+	float: right;
+	color:#FFFFFF;
+}
+#view2 .nav li
+{
+	display: inline-block;
+}
+#view2 .nav li p{
+	padding: 25px 30px 25px 30px;
+}
+#view2 .nav .location
+{
+	background-color: #ddbf31;
+}
+#view2 .nav .parking
+{
+	background-color: #b9bc4e;
+}#view2 .nav .hotels
+{
+	background-color: #e28c52;
+}#view2 .nav .directions
+{
+	background-color: #5e8687;
+}
+#view2 .navHolder
+{
+	width:100%;
+	background-color: #FFF;
+	color:#000000;
+}
+#view2 .navHolder .title
+{
+	float: left;
+	padding: 25px 30px 25px 30px;
+	font-weight: 800;
+}
+.clearBoth
+{
+	clear: both;
+	float: none;
+	height:0;
+	width:0;
 }

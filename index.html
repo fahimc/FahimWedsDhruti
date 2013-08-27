@@ -7,8 +7,8 @@
 		<title>index</title>
 		<meta name="author" content="" />
 		<link type="text/css" rel="stylesheet" href="resource/css/style.css" />
-		<script type="text/javascript" src="lib/fahimchowdhury/parallaxjs-fc-v0.2.js"></script>
-				<script type="text/javascript" src="lib/greensock/TweenLite.js"></script> 
+		<script type="text/javascript" src="lib/fahimchowdhury/toolkitMax-v1014-compressed.js"></script>
+		<script type="text/javascript" src="lib/greensock/TweenLite.js"></script>
 		<script type="text/javascript" src="lib/greensock/plugins/CSSPlugin.js"></script>
 		<script type="text/javascript" src="lib/greensock/plugins/CSSRulePlugin.js"></script>
 		<script type="text/javascript" src="lib/greensock/plugins/ScrollToPlugin.js"></script>
@@ -17,30 +17,87 @@
 
 	</head>
 	<body>
-		
-		<div id="parallaxHolder">
-			
-			<div id="view1">
-				
-				
-			</div>
-			<div id="view2">
-				<div id="venueContentHolder">
-					<h1>Cavendish Banqueting Hall</h1>
-					<p>The Grand Hall at Cavendish Banqueting boasts an impressive area of over 8,000 square feet and can comfortably accomodate in excess of 350 of your guests. The versatile, airconditioned Grand Hall is fully equipped with state of the art facilities and stunning audiovisual effects to transform your function into an event.</p>
+
+		<div id="view1">
+			<div class="cover">
+				<div class="countdownHolder">
+					<p id="countdown">
+						232 DAYS
+					</p>
+					<p class="text">
+						TO THE BIG DAY
+					</p>
 				</div>
 			</div>
-			<div id="view3"></div>
-			<div id="view4"><div id="us"></div></div>
+			<div class="logoHolder">
+				<img src="resource/image/logo.gif" class="logo" />
+			</div>
 		</div>
-		<div id="logo"></div>
+		<div class="view1Divider"></div>
+		<div id="view2">
+			<div class="navHolder">
+				<p class="title">
+					VENUE
+				</p>
+				<div class="nav">
+					<ul >
+						<li class="location">
+							<p>
+								LOCATION
+							</p>
+						</li>
+						<li class="parking">
+							<p>
+								PARKING
+							</p>
+						</li>
+						<li class="hotels">
+							<p>
+								HOTELS
+							</p>
+						</li>
+						<li class="directions">
+							<p>
+								DIRECTION
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="clearBoth"></div>
+			</div>
+		</div>
+
 		<div id="nav">
-			<div class="item" onclick="Parallax.navigateTo(0)"><p>HOME</p></div>
-			<div class="item" onclick="Parallax.navigateTo(1)"><p>VENUE</p></div>
-			<div class="item" onclick="Parallax.navigateTo(2)"><p>WEDDING DETAILS</p></div>
-			<div class="item" onclick="Parallax.navigateTo(3)"><p>DIRECTION</p></div>
-			<div class="item" onclick="Parallax.navigateTo(1)"><p>RSVP</p></div>
-			<div class="item" onclick="Parallax.navigateTo(1)"><p>CONTACT</p></div>
+			<div class="item" onclick="Parallax.navigateTo(0)">
+				<p>
+					HOME
+				</p>
+			</div>
+			<div class="item" onclick="Parallax.navigateTo(1)">
+				<p>
+					VENUE
+				</p>
+			</div>
+			<div class="item" onclick="Parallax.navigateTo(2)">
+				<p>
+					WEDDING DETAILS
+				</p>
+			</div>
+			<div class="item" onclick="Parallax.navigateTo(3)">
+				<p>
+					DIRECTION
+				</p>
+			</div>
+			<div class="item" onclick="Parallax.navigateTo(1)">
+				<p>
+					RSVP
+				</p>
+			</div>
+			<div class="item" onclick="Parallax.navigateTo(1)">
+				<p>
+					CONTACT
+				</p>
+			</div>
 		</div>
 	</body>
 </html>
