@@ -34,6 +34,12 @@ html, body {
 	background-color: #FFFFFF;
 	color: #191919;
 }
+#viewHolder
+{
+	width:100%;
+	height:100%;
+	position: relative;
+}
 #view1 
 {
 	width: 100%;
@@ -73,19 +79,32 @@ width:100%;
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	width: 150px;
+	
 	text-align: center;
-	color: #c79810;
+	color: #DDBF31;
 	font-weight: 800;
-	text-shadow: 2px 2px 1px #000;
+	text-shadow: 1px 1px 1px #000;
 }
 #view1 .countdownHolder .text{
 	
 	font-size: 18px;
+	margin-top: 5px;
 }
-#countdown
+#countdown li 
 {
 	font-size: 30px;
+	list-style: none;
+	text-align: center;
+}
+#countdown li p.title
+{
+	font-size: 14px;
+	margin-top: -10px;
+}
+#countdown li
+{
+	display: inline-block;
+	margin-left: 10px;
 }
 #view2
 {
@@ -94,11 +113,13 @@ width:100%;
 	position: relative;
 	background-color: #383733;
 }
-.view1Divider
+.divider
 {
 	width:100%;
 	height:5px;
 	background-color: #383733;
+	/*z-index: 99999;*/
+position: relative;
 }
 #view2 .nav
 {
@@ -109,6 +130,13 @@ width:100%;
 #view2 .nav li
 {
 	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+}
+#view2 .nav li:hover
+{
+	background-color: #191919;
+	
 }
 #view2 .nav li p{
 	padding: 25px 30px 25px 30px;
@@ -132,12 +160,82 @@ width:100%;
 	width:100%;
 	background-color: #FFF;
 	color:#000000;
+	border-bottom: 5px solid #191919;
 }
 #view2 .navHolder .title
 {
 	float: left;
 	padding: 25px 30px 25px 30px;
 	font-weight: 800;
+}
+#locationContent
+{
+	background: url(../image/hall.gif) no-repeat right 103px;
+	width:100%;
+	height:724px;
+	position: absolute;
+}
+#parkingContent
+{
+	background: url(../image/parking.gif) no-repeat right 103px;
+	width:100%;
+	height:724px;
+	position: absolute;
+	visibility: hidden;
+}
+#hotelContent
+{
+	background: url(../image/hotels.gif)  #73880a no-repeat right top;
+	width:100%;
+	height:724px;
+	position: absolute;
+	visibility: hidden;
+}
+#hotelContent hr
+{
+	border: 0;
+	height: 2px;
+	background-color: #FFFFFF;
+	margin-bottom: 10px;
+}
+#venueSlider
+{
+	background: url(../image/location_map.gif) #73880a no-repeat right top;
+	width:100%;
+	height:724px;
+	position: relative;
+	
+}
+#venueSlider .copyHolder
+{
+	background-color: #191919;
+	padding: 20px;
+	color: #FFFFFF;
+	width: auto;
+	display: inline-block;
+	margin-left: 350px;
+	margin-top: 60px;
+	font-size: 17px;
+	
+}
+#venueSlider .copyHolder h1
+{
+	color:#ddbf31;
+	font-size: 25px;
+}
+
+#venueSlider .copyHolder .title
+{
+	font-weight: bold;
+}
+#venueSlider .copyHolder .small
+{
+	font-size: 11px;
+	
+}
+#venueSlider .copyHolder .place
+{
+	margin-bottom: 10px;
 }
 .clearBoth
 {
