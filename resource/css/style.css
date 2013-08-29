@@ -51,7 +51,7 @@ html, body {
 	position:relative;
 	width:100%;
 	height:80.25%;
-	background: url(../image/bg_home.jpg) no-repeat center bottom fixed;
+	background: url(../image/bg_home3.jpg) no-repeat center bottom fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -221,7 +221,7 @@ position: relative;
 #venueSlider .copyHolder h1
 {
 	color:#ddbf31;
-	font-size: 25px;
+	font-size: 21px;
 }
 
 #venueSlider .copyHolder .title
