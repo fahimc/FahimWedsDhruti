@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300);
 @import url(http://fonts.googleapis.com/css?family=Chivo:900);
-@import url(http://fonts.googleapis.com/css?family=Fenix);
 
 * {
 	padding: 0;
@@ -49,40 +48,36 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 80.25%;
-	
-	
+	background: url(../image/bg_home3.jpg) no-repeat center bottom fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	min-height: 642px;
 }
 #view1 .logoHolder {
 	width: 100%;
 	height: 158px;
 	position: absolute;
-	top: 20px;
-	
+	bottom: 0;
+	background-color: #FFFFFF;
 	text-align: center;
-	font-family: 'Fenix', serif;
 }
-#view1 .logoHolder  h1
-{
-	color:#090e45;
-}
-#view1 .logoHolder hr
-{
-	width:90%;
-	height:1px;
-	border: 0;
-	background-color: #090E45;
-	margin-left: 5%;
+#view1 .logoHolder .logo {
+	width: 399px;
+	height: 91px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 33px;
 }
 #view1 .countdownHolder {
 	position: absolute;
 	right: 20px;
-	top: 120px;
+	top: 20px;
 	text-align: center;
 	color: #DDBF31;
 	font-weight: 800;
 	text-shadow: 1px 1px 1px #000;
-	font-family: 'Fenix', serif;
 }
 #view1 .countdownHolder .text {
 
@@ -96,7 +91,7 @@ html, body {
 }
 #countdown li p.title {
 	font-size: 14px;
-	margin-top: -5px;
+	margin-top: -10px;
 }
 #countdown li {
 	display: inline-block;

@@ -31,6 +31,7 @@
 		{
 			if(children[a].clientHeight)
 			{
+				if(Utensil.stageWidth()<=790 && count==0)h-=document.getElementById("nav").clientHeight;
 				if(children[a].className!="divider" && count==index)break;
 				h+=children[a].clientHeight;
 				if(children[a].className!="divider")count++;
