@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=false;">
+		<title>Fahim Weds Dhruti</title>
+		<meta name="author" content="" />
+		<link type="text/css" rel="stylesheet" href="resource/css/style.css" />
+		<script type="text/javascript" src="lib/fahimchowdhury/toolkitMax-v1014-compressed.js"></script>
+		<script type="text/javascript" src="lib/greensock/TweenLite.js"></script>
+		<script type="text/javascript" src="lib/greensock/plugins/CSSPlugin.js"></script>
+		<script type="text/javascript" src="lib/greensock/plugins/CSSRulePlugin.js"></script>
+		<script type="text/javascript" src="lib/greensock/plugins/ScrollToPlugin.js"></script>
+		<script type="text/javascript" src="lib/greensock/easing/EasePack.js"></script>
+		<script type="text/javascript" src="src/com/util/Countdown.js"></script>
+		<script type="text/javascript" src="src/main.js"></script>
+
+	</head>
+	<body>
+		<div id="viewHolder">
+			<div id="view1">
+				<div class="cover">
+					<div class="countdownHolder">
+						<ul id="countdown">
+							<li>
+								<p id="c_days">
+									0
+								</p>
+								<p class="title">
+									DAYS
+								</p>
+							</li>
+							<li>
+								<p id="c_hours">
+									0
+								</p>
+								<p class="title">
+									HR
+								</p>
+							</li>
+							<li>
+								<p id="c_mins">
+									0
+								</p>
+								<p class="title">
+									MINS
+								</p>
+							</li>
+							<li>
+								<p id="c_secs">
+									0
+								</p>
+								<p class="title">
+									SECS
+								</p>
+							</li>
+						</ul>
+						<p class="text">
+							TO THE BIG DAY!
+						</p>
+					</div>
+				</div>
+				<div class="logoHolder">
+					<h1>FAHIM & DHRUTI</h1>
+					<hr>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div id="view2">
+				<div class="navHolder">
+					<p class="title">
+						VENUE::<span id="venueNavTitle">LOCATION</span>
+					</p>
+					<div class="nav">
+						<ul >
+							<li class="location" onclick="changeVenueContent('locationContent','LOCATION')">
+								<p>
+									LOCATION
+								</p>
+							</li>
+							<li class="parking"  onclick="changeVenueContent('parkingContent','PARKING')">
+								<p>
+									PARKING
+								</p>
+							</li>
+							<li class="hotels" onclick="changeVenueContent('hotelContent','HOTELS')">
+								<p>
+									HOTELS
+								</p>
+							</li>
+							<li class="directions">
+								<p>
+									DIRECTION
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="clearBoth"></div>
+				</div>
+				<div id="venueSlider">
+					<div id="locationContent" class="">
+						<div class="copyHolder">
+							<h1>Canvendish Banqueting Hall</h1>
+							<p>
+								fci House
+								<br>
+								Edgware Road (opp Mercedes Benz)
+								<br>
+								Colindale
+								<br>
+								London
+								<br>
+								NW9 5AE
+								<br>
+								020 8205 5012
+							</p>
+						</div>
+					</div>
+					<div id="parkingContent">
+						<div class="copyHolder">
+							<h1>Parking Suggestions</h1>
+							<div class="place">
+								<p class="title">
+									ASDA
+								</p>
+								<p class="small">
+									Capitol Way
+									<br>
+									London NW9 0AS
+									<br>
+									020 8358 2510
+								</p>
+							</div>
+							<div class="place">
+							<p class="title">
+								The Greenway Road
+							</p>
+							<p class="small">
+									Edgeware<br>
+									London
+								</p>
+						</div>
+						<div class="place">
+							<p class="title">
+								Greenway Gardens Road
+							</p>
+							<p class="small">
+									Edgeware<br>
+									London
+								</p>
+						</div>
+						<div class="place">
+							<p class="title">
+								Capitol Way
+							</p>
+							<p class="small">
+									Edgeware<br>
+									London
+								</p>
+						</div>
+						</div>
+						
+					</div>
+					<div id="hotelContent">
+						<div class="copyHolder">
+							<h1>Hotels</h1>
+							<div class="place">
+								<p class="title">
+									Hendon Hotel
+								</p>
+								<p class="small">
+									Ashley Lane<br>Hendon<br>London<br>NW4 1HF<br>0845 072 7448<br><br>
+									Driving Distance: 7 mins<br>Hotel class: 4 stars
+								</p>
+							</div>
+							<hr>
+							<div class="place">
+								<p class="title">
+									Premier Inn
+								</p>
+								<p class="small">
+									435 Burnt Oak Broadway<br>Edgware<br>Middlesex<br>HA8 5AQ<br>0871 527 8652<br><br>Driving Distance: 3 mins<br>Hotel class: 3 stars
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="nav">
+			<div class="item" onclick="navigateTo(0)">
+				<p>
+					HOME
+				</p>
+			</div>
+			<div class="item" onclick="navigateTo(1)">
+				<p>
+					VENUE
+				</p>
+			</div>
+			<div class="item" onclick="navigateTo(2)">
+				<p>
+					WEDDING DETAILS
+				</p>
+			</div>
+			<div class="item" onclick="navigateTo(3)">
+				<p>
+					DIRECTION
+				</p>
+			</div>
+			<div class="item" onclick="navigateTo(1)">
+				<p>
+					RSVP
+				</p>
+			</div>
+			<div class="item" onclick="Parallax.navigateTo(1)">
+				<p>
+					CONTACT
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

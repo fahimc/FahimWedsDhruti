@@ -1,6 +1,8 @@
 (function(window) {
 	var currentVenue="locationContent";
 	var countdown;
+	var fader;
+	var gMap;
 	function Main() {
 		if (window.addEventListener) {
 			window.addEventListener("load", onLoad);
@@ -11,6 +13,37 @@
 	}
 
 	function onLoad() {
+		startCountdown();
+		initFader();
+		createMap();
+		onSoundClicked();
+	}
+	function createMap()
+	{
+		// var myOptions = {
+        // center: new google.maps.LatLng(51.595681,-0.260637),
+        // zoom: 15,
+        // mapTypeId: google.maps.MapTypeId.ROADMAP,
+        // disableDefaultUI: true
+    // };
+// 
+    // var map = new google.maps.Map(document.getElementById("map"), myOptions);
+    	gMap = new GoogleMap();
+    	gMap.latLong(51.595681,-0.260637);
+    	gMap.zoom(15);
+    	gMap.build("map");
+    	gMap.addMarker("Canvendish Banqueting Hall",51.595266,-0.260357,"resource/image/hall_small.png");
+	}
+	function initFader()
+	{
+		fader= new BackgroundFader(document.getElementById("backgroundFader"));
+		fader.attach("bg1");
+		fader.attach("bg2");
+		fader.start();
+		
+	}
+	function startCountdown()
+	{
 		countdown=new Countdown('20/04/2014 3:0 PM',onCountDownTicker);
 		countdown.start();
 	}
@@ -22,6 +55,19 @@
 		  document.getElementById("c_mins").innerHTML =event.minutes;
 		   document.getElementById("c_secs").innerHTML =event.seconds;
 	}
+	window.onSoundClicked=function()
+	{
+		var mute=true;
+		if(document.getElementById("soundPlayer").muted)
+		{
+			mute=false;
+			document.getElementById("sound").className="";
+		}else{
+			mute=true;
+			document.getElementById("sound").className="off";
+		}
+			document.getElementById("soundPlayer").muted=mute;
+	}
 	window.navigateTo=function(index)
 	{
 		var children = document.getElementById("viewHolder").childNodes;
@@ -31,11 +77,14 @@
 		{
 			if(children[a].clientHeight)
 			{
-				if(Utensil.stageWidth()<=790 && count==0)h-=document.getElementById("nav").clientHeight;
-				if(children[a].className!="divider" && count==index)break;
-				h+=children[a].clientHeight;
-				if(children[a].className!="divider")count++;
 				
+				if(children[a].id!="nav" && count==index)break;
+			
+				if(children[a].id!="nav")
+				{
+				h+=children[a].clientHeight;
+					count++;
+				}
 			}
 		}
 		TweenLite.to( document.body,1,{scrollTo:{y:h,x:0}});

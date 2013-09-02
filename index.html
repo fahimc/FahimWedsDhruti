@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, user-scalable=false;">
-		<title>Fahim Weds Dhruti</title>
-		<meta name="author" content="" />
-		<link type="text/css" rel="stylesheet" href="resource/css/style.css" />
+		<title>Save the Date::Fahim & Dhruti</title>
+		<meta name="author" content="Fahim" />
+		<!-- Date: 2013-09-02 -->
+		<link type="text/css" rel="stylesheet" href="resource/css/style.css"/>
 		<script type="text/javascript" src="lib/fahimchowdhury/toolkitMax-v1014-compressed.js"></script>
 		<script type="text/javascript" src="lib/greensock/TweenLite.js"></script>
 		<script type="text/javascript" src="lib/greensock/plugins/CSSPlugin.js"></script>
@@ -15,16 +15,42 @@
 		<script type="text/javascript" src="lib/greensock/plugins/ScrollToPlugin.js"></script>
 		<script type="text/javascript" src="lib/greensock/easing/EasePack.js"></script>
 		<script type="text/javascript" src="src/com/util/Countdown.js"></script>
+		<script type="text/javascript" src="src/com/module/BackgroundFader.js"></script>
+		 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		 <script type="text/javascript" src="src/com/module/GoogleMap.js"></script>
 		<script type="text/javascript" src="src/main.js"></script>
-
 	</head>
 	<body>
 		<div id="viewHolder">
-			<div id="view1">
-				<div class="cover">
-					<div class="countdownHolder">
+			<ul id="nav">
+				<li  onclick="navigateTo(1)">
+					VENUE
+				</li>
+				<li onclick="navigateTo(2)">
+					WEDDING DETAILS
+				</li>
+				<li>
+					CONTACT
+				</li>
+				<li>
+					RSVP
+				</li>
+				<li class="last" onclick="onSoundClicked()">
+					<div id="sound"></div>
+				</li>
+			</ul>
+			<div id="homeView">
+				<div id="backgroundFader">
+					<div id="fader2" class="backgroundCover"></div>
+					<div id="fader1" class="backgroundCover bg1" style="visibility: visible"></div>
+				</div>
+				<div class="logo">
+
+				</div>
+				<div class="us"></div>
+				<div class="countdownHolder">
 						<ul id="countdown">
-							<li>
+							<li class="first">
 								<p id="c_days">
 									0
 								</p>
@@ -61,166 +87,60 @@
 							TO THE BIG DAY!
 						</p>
 					</div>
-				</div>
-				<div class="logoHolder">
-					<h1>FAHIM & DHRUTI</h1>
-					<hr>
-				</div>
 			</div>
-			<div class="divider"></div>
-			<div id="view2">
-				<div class="navHolder">
-					<p class="title">
-						VENUE::<span id="venueNavTitle">LOCATION</span>
-					</p>
-					<div class="nav">
-						<ul >
-							<li class="location" onclick="changeVenueContent('locationContent','LOCATION')">
-								<p>
-									LOCATION
-								</p>
-							</li>
-							<li class="parking"  onclick="changeVenueContent('parkingContent','PARKING')">
-								<p>
-									PARKING
-								</p>
-							</li>
-							<li class="hotels" onclick="changeVenueContent('hotelContent','HOTELS')">
-								<p>
-									HOTELS
-								</p>
-							</li>
-							<li class="directions">
-								<p>
-									DIRECTION
-								</p>
-							</li>
-						</ul>
-					</div>
-					<div class="clearBoth"></div>
+			<div id="venueView">
+				<div class="sectionHeading">
+					<p>VENUE</p>
 				</div>
-				<div id="venueSlider">
-					<div id="locationContent" class="">
-						<div class="copyHolder">
-							<h1>Canvendish Banqueting Hall</h1>
-							<p>
-								fci House
-								<br>
-								Edgware Road (opp Mercedes Benz)
-								<br>
-								Colindale
-								<br>
-								London
-								<br>
-								NW9 5AE
-								<br>
-								020 8205 5012
-							</p>
-						</div>
-					</div>
-					<div id="parkingContent">
-						<div class="copyHolder">
+				<div class="contentWrapper">
+					<p class="headingTab">LOCATION</p>
+					<ul class="columns">
+						<li class="left">
+							<div id="map"></div>
+						</li>
+						<li class="last">
+							<h1>Cavendish Banqueting Hall</h1>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry&#46; Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s&#44; when an unknown printer took a galley of type and scrambled it to make a type specimen book&#46; It has survived not only five centuries&#44; but also the leap into electronic typesetting&#44; remaining essentially unchanged&#46; It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages&#44; and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum&#46;<br><br>fci House<br>Edgware Road &#40;opp Mercedes Benz&#41;     <br>Colindale <br>London</p>
+						</li>
+					</ul>
+				</div>
+				<div class="divider"></div>
+				<div class="contentWrapper">
+					<p class="headingTab">PARKING</p>
+					<ul class="columns">
+						<li class="left">
+							<div class="parking"></div>
+						</li>
+						<li class="last">
 							<h1>Parking Suggestions</h1>
-							<div class="place">
-								<p class="title">
-									ASDA
-								</p>
-								<p class="small">
-									Capitol Way
-									<br>
-									London NW9 0AS
-									<br>
-									020 8358 2510
-								</p>
-							</div>
-							<div class="place">
-							<p class="title">
-								The Greenway Road
-							</p>
-							<p class="small">
-									Edgeware<br>
-									London
-								</p>
-						</div>
-						<div class="place">
-							<p class="title">
-								Greenway Gardens Road
-							</p>
-							<p class="small">
-									Edgeware<br>
-									London
-								</p>
-						</div>
-						<div class="place">
-							<p class="title">
-								Capitol Way
-							</p>
-							<p class="small">
-									Edgeware<br>
-									London
-								</p>
-						</div>
-						</div>
-						
-					</div>
-					<div id="hotelContent">
-						<div class="copyHolder">
+							<p><b>ASDA</b><br>Capitol Way <br>London NW9 0AS <br>020 8358 2510<br><br><b>The Greenway</b> Road<br>Edgeware<br>London<br><br><b>Greenway Gardens Road</b><br>Edgeware<br>London<br><br><b>Capitol Way</b><br>Edgeware<br>London</p>
+						</li>
+					</ul>
+				</div>
+				<div class="divider"></div>
+				<div class="contentWrapper">
+					<p class="headingTab">HOTELS</p>
+					<ul class="columns">
+						<li class="left">
+							<div class="hotels"></div>
+						</li>
+						<li class="last">
 							<h1>Hotels</h1>
-							<div class="place">
-								<p class="title">
-									Hendon Hotel
-								</p>
-								<p class="small">
-									Ashley Lane<br>Hendon<br>London<br>NW4 1HF<br>0845 072 7448<br><br>
-									Driving Distance: 7 mins<br>Hotel class: 4 stars
-								</p>
-							</div>
-							<hr>
-							<div class="place">
-								<p class="title">
-									Premier Inn
-								</p>
-								<p class="small">
-									435 Burnt Oak Broadway<br>Edgware<br>Middlesex<br>HA8 5AQ<br>0871 527 8652<br><br>Driving Distance: 3 mins<br>Hotel class: 3 stars
-								</p>
-							</div>
-						</div>
-					</div>
+							<p><b>Hendon Hotel</b> <br>Ashley Lane<br>Hendon<br>London<br>NW4 1HF<br>0845 072 7448<br><br><span class="small">Driving Distance&#58; 7 mins<br>Hotel class&#58; 4 stars</span><br><br><br><b>Premier Inn</b><br>435 Burnt Oak Broadway<br>Edgware<br>Middlesex<br>HA8 5AQ<br>0871 527 8652<br><br><span class="small">Driving Distance&#58; 3 mins<br>Hotel class&#58; 3 stars</span></p>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</div>
-		</div>
-		<div id="nav">
-			<div class="item" onclick="navigateTo(0)">
-				<p>
-					HOME
-				</p>
+			<div id="detailsView">
+				<div class="sectionHeading">
+					<p>WEDDING DETAILS</p>
+				</div>
 			</div>
-			<div class="item" onclick="navigateTo(1)">
-				<p>
-					VENUE
-				</p>
-			</div>
-			<div class="item" onclick="navigateTo(2)">
-				<p>
-					WEDDING DETAILS
-				</p>
-			</div>
-			<div class="item" onclick="navigateTo(3)">
-				<p>
-					DIRECTION
-				</p>
-			</div>
-			<div class="item" onclick="navigateTo(1)">
-				<p>
-					RSVP
-				</p>
-			</div>
-			<div class="item" onclick="Parallax.navigateTo(1)">
-				<p>
-					CONTACT
-				</p>
-			</div>
+			<audio autoplay="autoplay" id="soundPlayer">
+				<source src="music.ogg" />
+				<source src="resource/mp4/Pitbull.mp3" />
+			</audio>
 		</div>
 	</body>
 </html>
+

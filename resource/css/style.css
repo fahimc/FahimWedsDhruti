@@ -10,84 +10,122 @@ html, body {
 	width: 100%;
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
+	background-color: #1a1a1a;
 }
-#nav {
-	position: fixed;
-	left: 0;
-	top: 180px;
-	width: 330px;
-}
-
-#nav .item {
-
-	background-color: #191919;
-	padding: 5px 20px 5px 20px;
-	color: #FFF;
-	margin-bottom: 3px;
-	width: auto;
-	display: inline-block;
-	margin-right: 100px;
-	font-weight: 700;
-	cursor: pointer;
-	font-size: 20px;
-}
-#nav .item:hover {
-	background-color: #FFFFFF;
-	color: #191919;
+body {
+	overflow: auto;
 }
 #viewHolder {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	min-width: 1000px;
 }
-#view1 {
+#nav {
+	position: fixed;
+	right: 0;
+	background-color: #1a1a1a;
+	color: #FFFFFF;
+	list-style: none;
+	z-index: 10;
+	padding: 15px 56px 15px 56px;
+	vertical-align: middle;
+}
+#nav li {
+	display: inline-block;
+	font-weight: 800;
+	font-size: 18px;
+	margin-right: 15px;
+	cursor: pointer;
+}
+#nav li:hover {
+	color: #FF9C00;
+}
+#nav li.last {
+	margin-right: 0px;
+}
+#sound {
+	margin-top: 2px;
+	width: 26px;
+	height: 19px;
+	background: url(../image/sound.gif) no-repeat;
+	background-position: 0 -19px;
+}
+#sound.off {
+	background-position: 0 0px;
+}
+/* Home */
+#homeView {
+	position: relative;
+	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	position: relative;
+	min-height: 800px;
 }
-#view1 .cover {
-	position: relative;
-	width: 100%;
-	height: 80.25%;
-	
-	
-	min-height: 642px;
-}
-#view1 .logoHolder {
-	width: 100%;
-	height: 158px;
+.logo {
+	width: 324px;
+	height: 168px;
+	left: 40px;
 	position: absolute;
-	top: 20px;
-	
-	text-align: center;
-	font-family: 'Fenix', serif;
+	background: url(../image/logo.gif) no-repeat;
 }
-#view1 .logoHolder  h1
-{
-	color:#090e45;
-}
-#view1 .logoHolder hr
-{
-	width:90%;
-	height:1px;
-	border: 0;
-	background-color: #090E45;
-	margin-left: 5%;
-}
-#view1 .countdownHolder {
+.us {
+	width: 637px;
+	height: 682px;
 	position: absolute;
-	right: 20px;
-	top: 120px;
+	background: url(../image/us.png) no-repeat;
+	left: 50%;
+	bottom: 0;
+	margin-left: -318.5px;
+}
+.backgroundCover {
+
+	visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#backgroundFader {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.bg1 {
+	background: url(../image/bg1.jpg) no-repeat center bottom fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.bg2 {
+	background: url(../image/bg2.jpg) no-repeat center bottom fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.countdownHolder {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
 	text-align: center;
-	color: #DDBF31;
+	color: #ff9c00;
 	font-weight: 800;
 	text-shadow: 1px 1px 1px #000;
-	font-family: 'Fenix', serif;
+	padding: 30px;
+	background-color: #191919;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	font-family: "Century Gothic", "Times Roman", sans-serif;
 }
-#view1 .countdownHolder .text {
+.countdownHolder .text {
 
 	font-size: 18px;
 	margin-top: 5px;
+	color: #FFFFFF;
 }
 #countdown li {
 	font-size: 30px;
@@ -102,159 +140,109 @@ html, body {
 	display: inline-block;
 	margin-left: 10px;
 }
-#view2 {
+#countdown li.first {
+	margin-left: 0px;
+}
+/* GENERAL */
+.sectionHeading {
 	width: 100%;
-	height: 100%;
-	position: relative;
-	background-color: #383733;
+	background-color: #c9cc38;
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+.sectionHeading p {
+	color: #FFFFFF;
+	font-family: "Century Gothic", "Times Roman", sans-serif;
+	font-weight: bold;
+	margin-left: 40px;
+	font-size: 35px;
+}
+.headingTab {
+	background-color: #ff9c00;
+	padding: 17px 27px 17px 27px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: "Century Gothic", "Times Roman", sans-serif;
+	display: inline-block;
+	margin-bottom: 40px;
+}
+.contentWrapper {
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-bottom: 80px;
+}
+.contentWrapper .columns {
+	list-style: none;
+	width: 100%;
+}
+.contentWrapper .columns li {
+	display: inline-block;
+	width: 45%;
+	margin-right: 5%;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+.contentWrapper .columns li.left {
+	min-width: 513px;
+}
+.contentWrapper .columns li.last {
+	margin-right: 0%;
 }
 .divider {
 	width: 100%;
-	height: 5px;
-	background-color: #383733;
-	/*z-index: 99999;*/
-	position: relative;
+	background-color: #c9cc38;
+	height: 12px;
+	display: block;
 }
-#view2 .nav {
-
-	float: right;
-	color: #FFFFFF;
-}
-#view2 .nav li {
-	display: inline-block;
-	cursor: pointer;
-	font-weight: bold;
-}
-#view2 .nav li:hover {
-	background-color: #191919;
-}
-#view2 .nav li p {
-	padding: 25px 30px 25px 30px;
-}
-#view2 .nav .location {
-	background-color: #ddbf31;
-}
-#view2 .nav .parking {
-	background-color: #b9bc4e;
-}
-#view2 .nav .hotels {
-	background-color: #e28c52;
-}
-#view2 .nav .directions {
-	background-color: #5e8687;
-}
-#view2 .navHolder {
+/* VENUE */
+#venueView {
 	width: 100%;
-	background-color: #FFF;
-	color: #000000;
-	border-bottom: 5px solid #191919;
 }
-#view2 .navHolder .title {
-	float: left;
-	padding: 25px 30px 25px 30px;
-	font-weight: 800;
-}
-#locationContent {
-	background: url(../image/hall.gif) no-repeat right 103px;
+#map {
 	width: 100%;
-	height: 724px;
-	position: absolute;
-}
-#parkingContent {
-	background: url(../image/parking.gif) no-repeat right 103px;
-	width: 100%;
-	height: 724px;
-	position: absolute;
-	visibility: hidden;
-}
-#hotelContent {
-	background: url(../image/hotels.gif) #73880a no-repeat right top;
-	width: 100%;
-	height: 724px;
-	position: absolute;
-	visibility: hidden;
-}
-#hotelContent hr {
+	height: 390px;
 	border: 0;
-	height: 2px;
-	background-color: #FFFFFF;
-	margin-bottom: 10px;
 }
-#venueSlider {
-	background: url(../image/location_map.gif) #73880a no-repeat right top;
-	width: 100%;
-	height: 724px;
-	position: relative;
-}
-#venueSlider .copyHolder {
-	background-color: #191919;
-	padding: 20px;
-	color: #FFFFFF;
-	width: auto;
-	display: inline-block;
-	margin-left: 350px;
-	margin-top: 60px;
-	font-size: 17px;
-}
-#venueSlider .copyHolder h1 {
-	color: #ddbf31;
-	font-size: 21px;
-}
-
-#venueSlider .copyHolder .title {
+#venueView h1 {
+	color: #FF9C00;
 	font-weight: bold;
+	font-family: "Century Gothic", "Times Roman", sans-serif;
+	font-size: 25px;
 }
-#venueSlider .copyHolder .small {
+#venueView .contentWrapper .columns p {
+	margin-top: 10px;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+#venueView .contentWrapper .columns .parking {
+	background: url(../image/parking.gif) no-repeat right center;
+	max-width: 513px;
+	width: 100%;
+	height: 367px;
+	border: 3px solid #FFFFFF;
+}
+#venueView .contentWrapper .columns .hotels {
+	background: url(../image/hotel.gif) no-repeat right center;
+	max-width: 513px;
+	width: 100%;
+	height: 487px;
+	border: 3px solid #FFFFFF;
+}
+#venueView .contentWrapper .columns .small
+{
 	font-size: 11px;
 }
-#venueSlider .copyHolder .place {
-	margin-bottom: 10px;
+/* Detials */
+#detailsView {
+	width: 100%;
 }
-.clearBoth {
-	clear: both;
-	float: none;
-	height: 0;
-	width: 0;
-}
-@media all and (max-width: 790px) {
+@media all and (max-width: 1200px) {
+	.contentWrapper .columns li {
 
-	#nav {
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		background-color: #191919;
+		width: 35%;
 	}
-
-	#nav .item {
-
-		padding: 5px 5px 5px 5px;
-		margin-right: 0px;
-		font-size: 14px;
-	}
-	#venueSlider .copyHolder {
-
-		padding: 20px;
-		font-size: 14px;
-		margin-left: 20px;
-		margin-top: 60px;
-	}
-	#venueSlider .copyHolder h1 {
-		color: #ddbf31;
-		font-size: 17px;
-	}
-	#view1 .countdownHolder {
-		top: 40px;
-	}
-	#view2 .nav li p {
-		padding: 15px 20px 15px 20px;
-		font-size: 12px;
-	}
-	#view2 .navHolder .title {
-		font-size: 12px;
-		padding: 15px 20px 15px 20px;
-	}
-	#view1 .cover {
-	background: url(../image/bg_home3.jpg) no-repeat center center ;
+	#venueView h1
+	{
+		font-size: 22px;
 	}
 }
