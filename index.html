@@ -16,8 +16,8 @@
 		<script type="text/javascript" src="lib/greensock/easing/EasePack.js"></script>
 		<script type="text/javascript" src="src/com/util/Countdown.js"></script>
 		<script type="text/javascript" src="src/com/module/BackgroundFader.js"></script>
-		 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-		 <script type="text/javascript" src="src/com/module/GoogleMap.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="src/com/module/GoogleMap.js"></script>
 		<script type="text/javascript" src="src/main.js"></script>
 	</head>
 	<body>
@@ -29,10 +29,10 @@
 				<li onclick="navigateTo(2)">
 					WEDDING DETAILS
 				</li>
-				<li>
+				<li onclick="navigateTo(3)">
 					CONTACT
 				</li>
-				<li>
+				<li onclick="navigateTo(4)">
 					RSVP
 				</li>
 				<li class="last" onclick="onSoundClicked()">
@@ -49,91 +49,226 @@
 				</div>
 				<div class="us"></div>
 				<div class="countdownHolder">
-						<ul id="countdown">
-							<li class="first">
-								<p id="c_days">
-									0
-								</p>
-								<p class="title">
-									DAYS
-								</p>
-							</li>
-							<li>
-								<p id="c_hours">
-									0
-								</p>
-								<p class="title">
-									HR
-								</p>
-							</li>
-							<li>
-								<p id="c_mins">
-									0
-								</p>
-								<p class="title">
-									MINS
-								</p>
-							</li>
-							<li>
-								<p id="c_secs">
-									0
-								</p>
-								<p class="title">
-									SECS
-								</p>
-							</li>
-						</ul>
-						<p class="text">
-							TO THE BIG DAY!
-						</p>
-					</div>
+					<ul id="countdown">
+						<li class="first">
+							<p id="c_days">
+								0
+							</p>
+							<p class="title">
+								DAYS
+							</p>
+						</li>
+						<li>
+							<p id="c_hours">
+								0
+							</p>
+							<p class="title">
+								HR
+							</p>
+						</li>
+						<li>
+							<p id="c_mins">
+								0
+							</p>
+							<p class="title">
+								MINS
+							</p>
+						</li>
+						<li>
+							<p id="c_secs">
+								0
+							</p>
+							<p class="title">
+								SECS
+							</p>
+						</li>
+					</ul>
+					<p class="text">
+						TO THE BIG DAY!
+					</p>
+				</div>
 			</div>
 			<div id="venueView">
 				<div class="sectionHeading">
-					<p>VENUE</p>
+					<p>
+						VENUE
+					</p>
 				</div>
 				<div class="contentWrapper">
-					<p class="headingTab">LOCATION</p>
+					<p class="headingTab">
+						LOCATION
+					</p>
 					<ul class="columns">
 						<li class="left">
 							<div id="map"></div>
 						</li>
 						<li class="last">
 							<h1>Cavendish Banqueting Hall</h1>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry&#46; Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s&#44; when an unknown printer took a galley of type and scrambled it to make a type specimen book&#46; It has survived not only five centuries&#44; but also the leap into electronic typesetting&#44; remaining essentially unchanged&#46; It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages&#44; and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum&#46;<br><br>fci House<br>Edgware Road &#40;opp Mercedes Benz&#41;     <br>Colindale <br>London</p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry&#46; Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s&#44; when an unknown printer took a galley of type and scrambled it to make a type specimen book&#46; It has survived not only five centuries&#44; but also the leap into electronic typesetting&#44; remaining essentially unchanged&#46; It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages&#44; and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum&#46;
+								<br>
+								<br>
+								fci House
+								<br>
+								Edgware Road &#40;opp Mercedes Benz&#41;
+								<br>
+								Colindale
+								<br>
+								London
+							</p>
 						</li>
 					</ul>
 				</div>
 				<div class="divider"></div>
 				<div class="contentWrapper">
-					<p class="headingTab">PARKING</p>
+					<p class="headingTab">
+						PARKING
+					</p>
 					<ul class="columns">
 						<li class="left">
 							<div class="parking"></div>
 						</li>
 						<li class="last">
 							<h1>Parking Suggestions</h1>
-							<p><b>ASDA</b><br>Capitol Way <br>London NW9 0AS <br>020 8358 2510<br><br><b>The Greenway</b> Road<br>Edgeware<br>London<br><br><b>Greenway Gardens Road</b><br>Edgeware<br>London<br><br><b>Capitol Way</b><br>Edgeware<br>London</p>
+							<p>
+								<b>ASDA</b>
+								<br>
+								Capitol Way
+								<br>
+								London NW9 0AS
+								<br>
+								020 8358 2510
+								<br>
+								<br>
+								<b>The Greenway</b> Road
+								<br>
+								Edgeware
+								<br>
+								London
+								<br>
+								<br>
+								<b>Greenway Gardens Road</b>
+								<br>
+								Edgeware
+								<br>
+								London
+								<br>
+								<br>
+								<b>Capitol Way</b>
+								<br>
+								Edgeware
+								<br>
+								London
+							</p>
 						</li>
 					</ul>
 				</div>
 				<div class="divider"></div>
 				<div class="contentWrapper">
-					<p class="headingTab">HOTELS</p>
+					<p class="headingTab">
+						HOTELS
+					</p>
 					<ul class="columns">
 						<li class="left">
 							<div class="hotels"></div>
 						</li>
 						<li class="last">
 							<h1>Hotels</h1>
-							<p><b>Hendon Hotel</b> <br>Ashley Lane<br>Hendon<br>London<br>NW4 1HF<br>0845 072 7448<br><br><span class="small">Driving Distance&#58; 7 mins<br>Hotel class&#58; 4 stars</span><br><br><br><b>Premier Inn</b><br>435 Burnt Oak Broadway<br>Edgware<br>Middlesex<br>HA8 5AQ<br>0871 527 8652<br><br><span class="small">Driving Distance&#58; 3 mins<br>Hotel class&#58; 3 stars</span></p>
+							<p>
+								<b>Hendon Hotel</b>
+								<br>
+								Ashley Lane
+								<br>
+								Hendon
+								<br>
+								London
+								<br>
+								NW4 1HF
+								<br>
+								0845 072 7448
+								<br>
+								<br>
+								<span class="small">Driving Distance&#58; 7 mins
+									<br>
+									Hotel class&#58; 4 stars</span>
+								<br>
+								<br>
+								<br>
+								<b>Premier Inn</b>
+								<br>
+								435 Burnt Oak Broadway
+								<br>
+								Edgware
+								<br>
+								Middlesex
+								<br>
+								HA8 5AQ
+								<br>
+								0871 527 8652
+								<br>
+								<br>
+								<span class="small">Driving Distance&#58; 3 mins
+									<br>
+									Hotel class&#58; 3 stars</span>
+							</p>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div id="detailsView">
 				<div class="sectionHeading">
-					<p>WEDDING DETAILS</p>
+					<p>
+						WEDDING DETAILS
+					</p>
+				</div>
+				<div class="contentWrapper">
+					<p class="description">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry&#46; Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s&#44; when an unknown printer took a galley of type and scrambled it to make a type specimen book&#46; It has survived not only five centuries&#44; but also the leap into electronic typesetting&#44; remaining essentially unchanged&#46; It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages&#44; and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum&#46;
+					</p>
+					<div class="boxHolder left">
+						<h1>RECEPTION</h1>
+						<div class="hr"></div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry&#46; Lorem Ipsum has been the industry&#39;s standard dummy&#46;<br><br>&#45;No Box Gifts<br>&#45; Bllack Tie Event<br>&#45;RSVP Confirmed Guests Only<br><br>Cavendish Banqueting Hall<br>fci House<br>Edgware Road &#40;opp Mercedes Benz&#41; <br>Colindale <br>London</p>
+					</div>
+					<div class="boxHolder">
+						<h1>WEDDING</h1>
+						<div class="hr"></div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry&#46; Lorem Ipsum has been the industry&#39;s standard dummy&#46;<br><br>&#45;No Box Gifts<br>&#45; Bllack Tie Event<br>&#45;RSVP Confirmed Guests Only<br><br>Cavendish Banqueting Hall<br>fci House<br>Edgware Road &#40;opp Mercedes Benz&#41; <br>Colindale <br>London</p>
+					</div>
+					<div class="boxHolder">
+						<h1>MEHNDI</h1>
+						<div class="hr"></div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry&#46; Lorem Ipsum has been the industry&#39;s standard dummy&#46;<br><br>&#45;No Box Gifts<br>&#45; Bllack Tie Event<br>&#45;RSVP Confirmed Guests Only<br><br>Cavendish Banqueting Hall<br>fci House<br>Edgware Road &#40;opp Mercedes Benz&#41; <br>Colindale <br>London</p>
+					</div>
+					<div class="boxHolder imgRight">
+						<div class="detailsImage"></div>
+					</div>
+				</div>
+			</div>
+			<div id="contactView">
+				<div class="sectionHeading">
+					<p>
+						CONTACT
+					</p>
+				</div>
+				<div class="contentWrapper">
+					<div class="boxHolder left">
+						<h1>GROOM'S CONTACTS</h1>
+						<div class="hr"></div>
+						<p>Firoza Begum &#40;MUM&#41;<br>02082799315<br><br>Manir Ali &#40;DAD&#41;<br>02085247411<br><br>Fahim Chowdhury<br>07590420595</p>
+					</div>
+					<div class="boxHolder">
+						<h1>BRIDE'S CONTACTS</h1>
+						<div class="hr"></div>
+						<p>Firoza Begum &#40;MUM&#41;<br>02082799315<br><br>Manir Ali &#40;DAD&#41;<br>02085247411<br><br>Fahim Chowdhury<br>07590420595</p>
+					</div>
+				</div>
+			</div>
+			<div id="rsvpView">
+				<div class="sectionHeading">
+					<p>
+						RSVP
+					</p>
 				</div>
 			</div>
 			<audio autoplay="autoplay" id="soundPlayer">

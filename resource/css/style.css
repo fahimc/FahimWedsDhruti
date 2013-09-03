@@ -50,6 +50,7 @@ body {
 	height: 19px;
 	background: url(../image/sound.gif) no-repeat;
 	background-position: 0 -19px;
+	margin-bottom: -2px;
 }
 #sound.off {
 	background-position: 0 0px;
@@ -169,7 +170,7 @@ body {
 .contentWrapper {
 	margin-left: 40px;
 	margin-right: 40px;
-	margin-bottom: 80px;
+	padding-bottom: 80px;
 }
 .contentWrapper .columns {
 	list-style: none;
@@ -233,9 +234,78 @@ body {
 	font-size: 11px;
 }
 /* Detials */
-#detailsView {
+#detailsView,#contactView {
 	width: 100%;
+	padding-bottom: 50px;
+	color:#FFFFFF;
 }
+#detailsView .contentWrapper p
+{
+	color:#FFFFFF;
+	font-family: "Century Gothic", "Times Roman", sans-serif;
+	font-size: 14px;
+}
+#detailsView .contentWrapper p.description
+{
+	margin-top: 20px;
+	text-align: left;
+}
+ .boxHolder
+{
+	width:45%;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:40px;
+	display: inline-block;
+	vertical-align:top;
+	margin-right: 0%;
+
+}
+.boxHolder.left
+{
+	margin-right: 5%;
+}
+.boxHolder h1
+{
+	color:#c9cc38;
+	font-family: "Century Gothic", "Times Roman", sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+.boxHolder .hr
+{
+	
+	background-color: #C9CC38;
+	width:100%;
+	height:5px;
+		
+}
+.boxHolder p
+{
+	margin-top: 20px;
+}
+  .imgRight
+{
+	margin-left: 5%;
+}
+.boxHolder .detailsImage
+{
+	
+	width:100%;
+	background: url(../image/detailsImage.jpg) no-repeat;
+	height:327px;
+	border:3px solid #c9cc38;
+	max-width: 513px;
+}
+/* RSVP
+ */
+#rsvpView
+{
+	height:1000px;
+}
+/* MEDIA */
 @media all and (max-width: 1200px) {
 	.contentWrapper .columns li {
 

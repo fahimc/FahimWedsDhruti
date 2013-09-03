@@ -3,6 +3,14 @@
 	var countdown;
 	var fader;
 	var gMap;
+	var navData=
+	{
+		0:"home",
+		1:"venue",
+		2:"details",
+		3:"contact",
+		4:"rsvp"
+	}
 	function Main() {
 		if (window.addEventListener) {
 			window.addEventListener("load", onLoad);
@@ -17,6 +25,24 @@
 		initFader();
 		createMap();
 		onSoundClicked();
+		checkDeepLink();
+	}
+	function checkDeepLink()
+	{
+		
+		if(location.hash)
+		{
+			var pageName = location.hash.replace("#","");
+			for(var index in navData)
+			{
+				var item = navData[index];
+				if(item==pageName)
+				{
+					setTimeout(function(){navigateTo(index);},500);
+					return;
+				}
+			}
+		}
 	}
 	function createMap()
 	{
@@ -88,7 +114,7 @@
 			}
 		}
 		TweenLite.to( document.body,1,{scrollTo:{y:h,x:0}});
-		
+		location.hash =navData[index];
 	}
 	window.changeVenueContent=function(id,title)
 	{
