@@ -105,8 +105,8 @@
 			{
 				
 				if(children[a].id!="nav" && count==index)break;
-			
-				if(children[a].id!="nav")
+				
+				if(Utensil.stageWidth()<=1020|| children[a].id!="nav")
 				{
 				h+=children[a].clientHeight;
 					count++;
