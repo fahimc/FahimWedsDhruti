@@ -44,6 +44,16 @@ body {
 #nav li.last {
 	margin-right: 0px;
 }
+#nav .homeicon
+{
+	width:20px;
+	height:18px;
+	background: url(../image/home_icon.gif) no-repeat;
+}
+#nav .homeicon:hover
+{
+	background-position: 0 -18px;
+}
 #sound {
 	margin-top: 2px;
 	width: 26px;
