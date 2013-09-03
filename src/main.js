@@ -109,7 +109,7 @@
 				if(Utensil.stageWidth()<=1020|| children[a].id!="nav")
 				{
 				h+=children[a].clientHeight;
-					count++;
+					if(children[a].id!="nav")count++;
 				}
 			}
 		}

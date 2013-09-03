@@ -329,4 +329,12 @@ body {
 	.contentWrapper .columns li.left {
 		min-width: 0px;
 	}
+	#nav
+	{
+		padding: 15px 15px 15px 15px;
+	}
+	.logo {
+		left:50%;
+		margin-left: -162px;
+	}
 }
