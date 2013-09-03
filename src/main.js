@@ -5,11 +5,11 @@
 	var gMap;
 	var navData=
 	{
-		0:"home",
-		1:"venue",
-		2:"details",
-		3:"contact",
-		4:"rsvp"
+		0:{url:"home",top:0},
+		1:{url:"venue",top:0},
+		2:{url:"details",top:0},
+		3:{url:"contact",top:0},
+		4:{url:"rsvp",top:0}
 	}
 	function Main() {
 		if (window.addEventListener) {
@@ -21,13 +21,15 @@
 	}
 
 	function onLoad() {
+		document.getElementById("soundPlayer").volume=0.2;
 		startCountdown();
 		initFader();
 		createMap();
-		onSoundClicked();
+		//onSoundClicked();
 		checkDeepLink();
-		
+		setViewTop();
 		Utensil.addListener(window,"resize",onResize);
+		Utensil.addListener(window,"scroll",onScroll);
 	}
 	function checkDeepLink()
 	{
@@ -37,7 +39,8 @@
 			var pageName = location.hash.replace("#","");
 			for(var index in navData)
 			{
-				var item = navData[index];
+				
+				var item = navData[index].url;
 				if(item==pageName)
 				{
 					setTimeout(function(){navigateTo(index);},500);
@@ -48,14 +51,7 @@
 	}
 	function createMap()
 	{
-		// var myOptions = {
-        // center: new google.maps.LatLng(51.595681,-0.260637),
-        // zoom: 15,
-        // mapTypeId: google.maps.MapTypeId.ROADMAP,
-        // disableDefaultUI: true
-    // };
-// 
-    // var map = new google.maps.Map(document.getElementById("map"), myOptions);
+		
     	gMap = new GoogleMap();
     	gMap.latLong(51.595681,-0.260637);
     	gMap.zoom(15);
@@ -108,15 +104,21 @@
 				
 				if(children[a].id!="nav" && count==index)break;
 				
-				if(Utensil.stageWidth()<=1020|| children[a].id!="nav")
+				if(Utensil.stageWidth()<=1000|| children[a].id!="nav")
 				{
+				if(navData[count])navData[count].top = h;	
 				h+=children[a].clientHeight;
-					if(children[a].id!="nav")count++;
+					if(children[a].id!="nav")
+					{
+						
+						count++;
+					}
 				}
 			}
 		}
 		TweenLite.to( document.body,1,{scrollTo:{y:h,x:0}});
-		location.hash =navData[index];
+		location.hash =navData[index].url;
+		
 	}
 	window.changeVenueContent=function(id,title)
 	{
@@ -130,10 +132,62 @@
 	{
 		TweenLite.to( document.getElementById(currentVenue),1,{css:{autoAlpha:1}});
 	}
-	
+	function setViewTop()
+	{
+		var children = document.getElementById("viewHolder").childNodes;
+		var h=0;
+		var count=0;
+		for(var a=0;a<children.length;a++)
+		{
+			if(children[a].clientHeight)
+			{
+				
+				
+				
+				if(Utensil.stageWidth()<=1000|| children[a].id!="nav")
+				{
+				if(navData[count])navData[count].top = h;	
+				h+=children[a].clientHeight;
+					if(children[a].id!="nav")
+					{
+						
+						count++;
+					}
+				}
+			}
+		}
+		
+	}
+	function changePageName()
+	{
+		var holder = document.body;
+		var page=0;
+		for(var index in navData)
+			{
+				
+				var item = navData[index];
+				if(holder.scrollTop>= item.top )
+				{
+					
+					
+					page= index;
+					
+				}
+				
+				
+			}
+			
+			location.hash =navData[page].url;
+	}
+	function onScroll()
+	{
+		changePageName();
+	}
 	function onResize()
 	{
 		if(gMap)gMap.center();
+		setViewTop();
+		
 	}
 	
 	Main();
