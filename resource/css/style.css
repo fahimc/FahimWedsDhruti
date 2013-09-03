@@ -329,12 +329,20 @@ body {
 	.contentWrapper .columns li.left {
 		min-width: 0px;
 	}
-	#nav
-	{
+	#nav {
 		padding: 15px 15px 15px 15px;
 	}
 	.logo {
-		left:50%;
+		left: 50%;
 		margin-left: -162px;
 	}
+	.boxHolder h1 {
+		font-size: 20px;
+	}
+	.boxHolder {
+		width: 100%;
+	}
+.imgRight {
+margin-left: 0%;
+}
 }

@@ -26,6 +26,8 @@
 		createMap();
 		onSoundClicked();
 		checkDeepLink();
+		
+		Utensil.addListener(window,"resize",onResize);
 	}
 	function checkDeepLink()
 	{
@@ -128,6 +130,12 @@
 	{
 		TweenLite.to( document.getElementById(currentVenue),1,{css:{autoAlpha:1}});
 	}
+	
+	function onResize()
+	{
+		if(gMap)gMap.center();
+	}
+	
 	Main();
 }
 )(window);

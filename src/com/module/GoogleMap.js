@@ -50,5 +50,9 @@ var GoogleMap = function() {
 		// To add the marker to the map, call setMap();
 		marker.setMap(this.map);
 	}
+	_.center=function()
+	{
+		this.map.setCenter(this.latLong());
+	}
 })();
 
