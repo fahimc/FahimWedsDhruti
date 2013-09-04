@@ -94,6 +94,7 @@
 	}
 	window.navigateTo=function(index)
 	{
+		console.log("navigateTo",index);
 		var children = document.getElementById("viewHolder").childNodes;
 		var h=0;
 		var count=0;
@@ -116,7 +117,7 @@
 				}
 			}
 		}
-		TweenLite.to( document.body,1,{scrollTo:{y:h,x:0}});
+		TweenLite.to( window,1,{scrollTo:{y:h,x:0}});
 		location.hash =navData[index].url;
 		
 	}
